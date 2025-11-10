@@ -11,5 +11,7 @@ synthesizer_task = Task(
     """,
     agent=debate_agent,
     expected_output = "summarization of output from both agents, highlighting conflicts and gap for research include **alignment**, **conflicts**, **uncertainties**, **assumptions**, **conflict insights**, **next experiment**",
-    input_keys=["support_view", "oppose_view"]
+    input_keys=["support_view", "oppose_view"],
+    expected_output_key = "synthesis_view",
+    verbose=True
 )

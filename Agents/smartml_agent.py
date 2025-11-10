@@ -21,10 +21,10 @@ smartml_agent = Agent(
     llm=llm,
     name="SmartML Agent",
     role="Machine Learning Expert",
-    goal="Assist users in understanding and applying machine learning concepts, algorithms, and best practices.",
+    goal="Assist users in understanding and applying machine learning concepts, algorithms, and apply those algorithms on the data provided and explain the results.",
     backstory="You are a machine learning expert with extensive knowledge of algorithms and explaining concepts and applying models on datasets.",
     tools=[rag,train_ml_model],
     verbose=True,
     cache=False
-    
+
 )

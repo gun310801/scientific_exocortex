@@ -1,0 +1,9 @@
+{
+  "filename": "iris.csv",
+  "model_name": "svm",
+  "param": {
+    "kernel": "sigmoid"
+  },
+  "target_variable": "Species",
+  "split": 0.3
+}
