@@ -1,2 +1,11 @@
 venv
 .env
+__pycache__
+Agents/__pycache__
+Tools/__pycache__  
+Tasks/__pycache__
+.DS_Store
+downloaded_papers/
+downloaded_papers_against/
+JSONs/
+Datasets/
