@@ -75,8 +75,17 @@ def fetch_publications(argument: str) -> list:
         title = entry.find("atom:title", ns)
         pdf_link = None
         for link in entry.findall("atom:link", ns):
-            if link.attrib.get("title") == "pdf":
-                pdf_link = link.attrib["href"]
+            href = link.attrib.get("href", "")
+            link_title = (link.attrib.get("title") or "").lower()
+            link_type = (link.attrib.get("type") or "").lower()
+            if (
+                link_title == "pdf"
+                or link_type == "application/pdf"
+                or href.endswith(".pdf")
+                or "/pdf/" in href
+            ):
+                pdf_link = href
+                break
 
         pub_data = {
             "title": title.text.strip() if title is not None else "N/A",

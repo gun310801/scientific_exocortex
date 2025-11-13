@@ -1,0 +1,5 @@
+crewai==1.4.1
+crewai_tools==1.4.1
+pandas==2.3.3
+python-dotenv==1.2.1
+scikit_learn==1.4.0
